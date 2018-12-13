@@ -1,0 +1,92 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+    <!--<script type="text/javascript" src="jquery-3.3.1.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+    <!--$(function () {-->
+        <!--$('#load').click(function () {-->
+            <!--$('#feeds').load('index.php', function (data) {-->
+                <!--alert(data);-->
+            <!--})-->
+        <!--})-->
+    <!--})-->
+<!--</script>-->
+<!--<button id="load">Получить данные с php</button>-->
+<!--<div id="heeds">-->
+
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+</head>
+<body>
+
+<button id="load"> получить данніе с пхп</button>
+<div id="feeds"></div>
+<script>
+    /**
+     $(function() {
+        $('#load').click(function () {
+            $('#feeds').load('index.php',function (data) {
+                alert(data);
+
+            })
+        })
+    })
+     */
+    /**
+    $(function () {
+        $('#load').click(function () {
+            $('#feeds').html("");
+            $('#feeds').load('index.php', function (data) {
+                alert(data);
+            });
+        });
+
+        $(document).ajaxComplete(function () {
+            $('#feeds').append('1<br>')
+        });
+        $(document).ajaxError(function () {
+            $('#feeds').append('2<br>')
+        });
+        $(document).ajaxSend(function () {
+            $('#feeds').append('3<br>')
+        });
+        $(document).ajaxStart(function () {
+            $('#feeds').append('4<br>')
+        });
+        $(document).ajaxStop(function () {
+            $('#feeds').append('5<br>')
+        });
+        $(document).ajaxSuccess(function () {
+            $('#feeds').append('6<br>')
+        });
+    });
+    */
+    function time() {
+        $.ajax({
+            url:'index.php',
+            cash:false,
+            success:function (html) {
+                $('#feeds').html(html)
+            }
+
+        });
+    }
+    $(document).ready(function () {
+        time();
+        setInterval('time()',1000)
+    });
+</script>
+</body>
+</html>

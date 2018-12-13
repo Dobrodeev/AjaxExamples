@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<p>page1</p>
+<div></div>
+<script>
+    function forEach(data, callback) {
+        for (var key in data)
+        {
+            if (data.hasOwnProperty(key))
+            {
+                callback (key, data[key])
+            }
+        }
+    }
+    $.ajax({
+        url:'index.php',
+        dataTYPE:'json',
+        success:function (data) {
+            var str=[];
+            forEach(data, function (key, value) {
+                str.push('<b>'+key+'</b>='+value)
+            });
+            $("div").html(str.join('<br>'));
+        }
+    })
+</script>
+</body>
+</html>
