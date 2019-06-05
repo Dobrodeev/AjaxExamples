@@ -15,10 +15,10 @@ echo '</html>';
  */
 //echo date('H:i:s');
 //echo 'Privet'.' '.$_POST['username'];
-$arr['object'] = 'value';
+/*$arr['object'] = 'value';
 $arr['empty'] = 'false';
 $arr['sec'] = 1968;
 $arr['valid'] = true;
 $arr['size'] = 1;
-echo json_encode($arr);
+echo json_encode($arr);*/
 
