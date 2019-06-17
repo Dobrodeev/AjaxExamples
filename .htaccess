@@ -3,7 +3,7 @@
 #RewriteBase /
 #RewriteCond % {REQUEST_FILENAME} !-f
 #RewriteCond % {REQUEST_FILENAME} !-d
-#RewriteRule^(.*)$ index.php
+#RewriteRule^(.*)$ index0.php
 
 AddDefaultCharset utf-8
 
@@ -13,4 +13,4 @@ AddDefaultCharset utf-8
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteCond %{REQUEST_FILENAME} !-d
 
-#RewriteRule ^(.*)$ index.php
+#RewriteRule ^(.*)$ index0.php
