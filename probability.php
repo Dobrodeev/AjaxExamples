@@ -159,6 +159,15 @@ while ($row = $stmt->fetch()) {
     </tr>
 
 </table>
+<div></div>
+<div>
+    <p></p>
+</div>
+<ol>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
 <script>
     $(document).ready(function () {
         $('.show-more').on("click", function () {
