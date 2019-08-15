@@ -36,6 +36,7 @@ while ($row = $stmt->fetch()) {
 <body>
 <script src="../assets/jquery-3.3.1.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
+<script src="scriptButton.js"></script>
 <h5>Результаты нескольких опытов бросания монеты</h5>
 <!--<table class="table table-striped table-bordered table-hover">-->
 <table class="table table-condensed probability">
@@ -169,7 +170,7 @@ while ($row = $stmt->fetch()) {
     <li></li>
 </ol>
 <script>
-    $(document).ready(function () {
+/*    $(document).ready(function () {
         $('.show-more').on("click", function () {
             let rel = +$(this).attr('data-rel');
             $.ajax({
@@ -186,7 +187,7 @@ while ($row = $stmt->fetch()) {
                 }
             });
         });
-    });
+    });*/
 </script>
 </body>
 </html>
