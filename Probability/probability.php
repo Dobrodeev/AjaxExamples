@@ -26,7 +26,7 @@ while ($row = $stmt->fetch()) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <style>
         .hide {
             opacity: 0;
@@ -34,8 +34,8 @@ while ($row = $stmt->fetch()) {
     </style>
 </head>
 <body>
-<script src="assets/jquery-3.3.1.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../assets/jquery-3.3.1.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
 <h5>Результаты нескольких опытов бросания монеты</h5>
 <!--<table class="table table-striped table-bordered table-hover">-->
 <table class="table table-condensed probability">
