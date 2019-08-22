@@ -30,21 +30,28 @@
     </div>-->
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
-<div id="content"></div>
+<div id="results"></div>
 <script>
     $(document).ready(function () {
+        call();
+    });
+
+    function call() {
         $('.form-send').submit(function () {
+            let msg = $('.form-send').serialize();
             $.ajax({
-                type: 'post',
+                type: 'POST',
                 url: 'script.php',
-                data: 'exampleInputEmail1' + $('#exampleInputEmail1').val(), 'exampleInputPassword1' + $('#exampleInputPassword1').val(),
-                success: function (html) {
-                    $('#content').html(html)
+                data: msg,
+                success: function (data) {
+                    $('#results').html(data);
+                },
+                error: function (xhr, str) {
+                    alert('Возникла ошибка: ' + xhr.responseCode);
                 }
             });
-            return false;
         })
-    })
+    }
 </script>
 </body>
 </html>
