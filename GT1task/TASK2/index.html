@@ -9,7 +9,7 @@
 <body>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/jquery%20v3.4.1.js"></script>
-<form class="form-send">
+<!--<form class="form-send">
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
@@ -18,7 +18,7 @@
         <label for="exampleInputPassword1">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
     </div>
-    <!--<div class="form-group">
+    <div class="form-group">
         <label for="exampleInputFile">File input</label>
         <input type="file" id="exampleInputFile">
         <p class="help-block">Example block-level help text here.</p>
@@ -27,11 +27,24 @@
         <label>
             <input type="checkbox"> Check me out
         </label>
-    </div>-->
+    </div>
     <button type="submit" class="btn btn-default">Submit</button>
-</form>
+</form>-->
 <div id="results"></div>
 <script>
+    let form = $('<form class="form-send"></form>');
+    $('body').prepend(form);
+    let label1 = '<label for="exampleInputEmail1">Email address</label><br>';
+    let parent = $('.form-send');
+    parent.append(label1);
+    let input1 = $('<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">');
+    parent.append(input1);
+    let label2 = '<label for="exampleInputPassword1">Password</label><br>';
+    parent.append(label2);
+    let input2 = $('<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">');
+    parent.append(input2);
+    let button = $('<button type="submit" class="btn btn-default">Submit</button>');
+    parent.append(button);
     $(document).ready(function () {
         call();
     });
