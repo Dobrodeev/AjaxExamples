@@ -20,14 +20,14 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
-<?php ?>
+<?php
 /*$link = mysqli_connect("localhost", "my_user", "my_password", "my_db");
 $result = mysqli_query($link,'SELECT * FROM example');//дописать запросы
 
 //тут прописать логику обработки данных
 
 mysqli_close($link);*/
-<?php
+
 $host = '127.0.0.1';
 $db = 'regandauto';
 $user = 'root';
@@ -40,9 +40,27 @@ $opt = [
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES => false,];
 $pdo = new PDO($dsn, $user, $pass, $opt);
-$query1 = '';
-$query12 = '';
+$query0 = 'SELECT gt1_users.user_id, gt1_users.fio, gt1_comments.comments, gt1_comments.date FROM gt1_comments
+  JOIN gt1_users ON gt1_comments.user_id=gt1_users.user_id
+ORDER BY gt1_comments.date LIMIT 2';
+$query1 = 'SELECT comments, date, user_id FROM gt1_comments ORDER BY date';
+$query2 = 'SELECT user_id, fio FROM gt1_users';
 $stmt = $pdo->query($query1);
+$comments = [];
+while ($row = $stmt->fetch()){
+    $comments[] = $row;
+}
+$stmt = $pdo->query($query2);
+$users = [];
+while ($row = $stmt->fetch()){
+    $users[] = $row;
+}
+echo '<pre>';
+print_r($comments);
+echo '</pre>';
+echo '<pre>';
+print_r($users);
+echo '</pre>';
 //сюда необходимо вывести данные в таблицу
 echo '<table class="table table-dark">';
 echo '<thead>
@@ -54,11 +72,11 @@ echo '<thead>
     </tr>
     </thead>
     <tbody>';
-while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
+/*while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
     echo '<tr><td>' . $row['user_id'] . '</td><td>' . $row['fio'] . '</td><td>' . $row['comments'] . '</td><td>' . $row['date'] . '</td></tr>';
 }
 echo '</tbody>
-</table>';
+</table>';*/
 ?>
 </body>
 </html>
