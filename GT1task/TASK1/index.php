@@ -40,27 +40,15 @@ $opt = [
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES => false,];
 $pdo = new PDO($dsn, $user, $pass, $opt);
-$query0 = 'SELECT gt1_users.user_id, gt1_users.fio, gt1_comments.comments, gt1_comments.date FROM gt1_comments
+$query1 = 'SELECT * FROM `gt1_users`';
+$query12 = '';
+$stmt = $pdo->query($query1);
+/*$query0 = 'SELECT gt1_users.user_id, gt1_users.fio, gt1_comments.comments, gt1_comments.date FROM gt1_comments
   JOIN gt1_users ON gt1_comments.user_id=gt1_users.user_id
 ORDER BY gt1_comments.date LIMIT 2';
 $query1 = 'SELECT comments, date, user_id FROM gt1_comments ORDER BY date';
-$query2 = 'SELECT user_id, fio FROM gt1_users';
-$stmt = $pdo->query($query1);
-$comments = [];
-while ($row = $stmt->fetch()){
-    $comments[] = $row;
-}
-$stmt = $pdo->query($query2);
-$users = [];
-while ($row = $stmt->fetch()){
-    $users[] = $row;
-}
-echo '<pre>';
-print_r($comments);
-echo '</pre>';
-echo '<pre>';
-print_r($users);
-echo '</pre>';
+$query2 = 'SELECT user_id, fio FROM gt1_users';*/
+
 //сюда необходимо вывести данные в таблицу
 echo '<table class="table table-dark">';
 echo '<thead>
@@ -72,11 +60,14 @@ echo '<thead>
     </tr>
     </thead>
     <tbody>';
-/*while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
-    echo '<tr><td>' . $row['user_id'] . '</td><td>' . $row['fio'] . '</td><td>' . $row['comments'] . '</td><td>' . $row['date'] . '</td></tr>';
+while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
+    $query12 = 'SELECT * FROM `gt1_comments` WHERE `user_id`=' . intval($row['user_id']) . " ORDER BY `date` DESC LIMIT 1";
+    $stmt2 = $pdo->query($query12);
+    $row2 = $stmt2->fetch(PDO::FETCH_LAZY);
+    echo '<tr><td>' . $row['user_id'] . '</td><td>' . $row['fio'] . '</td><td>' . $row2['comments'] . '</td><td>' . $row2['date'] . '</td></tr>';
 }
 echo '</tbody>
-</table>';*/
+</table>';
 ?>
 </body>
 </html>
