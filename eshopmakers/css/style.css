@@ -1,0 +1,252 @@
+.top_nav {
+    background-image: -moz-linear-gradient(90deg, rgb(35, 35, 35) 0%, rgb(72, 72, 72) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(35, 35, 35) 0%, rgb(72, 72, 72) 100%);
+    box-shadow: 2.5px 4.33px 5px 0px rgb(0, 0, 0);
+}
+
+#navbarNavAltMarkup a {
+    font-size: 12px;
+    color: rgb(190, 190, 190);
+}
+
+.navbar_top {
+    height: 35px;
+    padding: 0;
+}
+
+#navbarNavAltMarkup a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.users_top {
+    display: flex;
+    align-items: center;
+}
+
+.users_top img {
+    width: 25px;
+}
+
+a.user_button {
+    color: #efb247;
+    font-size: 12px;
+    padding: 0.5rem 0.6rem;
+    text-decoration: none;
+}
+
+.users_top i {
+    color: rgb(190, 190, 190);
+}
+
+#navbarNavAltMarkup a:first-of-type {
+    padding-left: 0;
+}
+
+.content_header {
+    background: url('../img/backgroundRed.png');
+    border-bottom: 5px solid #e0e4e6;
+}
+
+.logo {
+    box-shadow: -8px 0 8px 0px rgba(0, 0, 0, .7);
+}
+
+.main_header_content {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.not_phone {
+    text-align: right;
+}
+
+.not_phone a {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.phone_a {
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.phone_a:hover {
+    opacity: 0.7;
+    color: #fff;
+    text-decoration: none;
+}
+
+.phone_a small {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.number_phone div:last-child .phone_a {
+    justify-content: flex-end;
+}
+
+.search_button {
+    border: none;
+    background: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+}
+
+.search_text {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.56);
+    width: 100%;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.search {
+    position: relative;
+}
+
+.number_phone {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.carts_info {
+    align-items: center;
+    display: flex;
+}
+
+.for_img {
+    margin-right: 10px;
+}
+
+.for_cart_content {
+    color: #fff;
+}
+
+.count_prod, .sum_prod {
+    margin-left: 5px;
+}
+
+.menu_main_ul {
+    border-radius: 8px;
+    background-image: -moz-linear-gradient(90deg, rgb(51, 77, 92) 0%, rgb(53, 94, 118) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(51, 77, 92) 0%, rgb(53, 94, 118) 100%);
+    display: flex;
+    margin-top: -28px;
+}
+
+.item_main_menu {
+    color: rgb(228, 228, 228);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 16px 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+.item_main_menu:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url(../img/vertical_line.png);
+}
+
+.item_main_menu:last-of-type:after {
+    display: none;
+}
+
+.item_main_menu:hover {
+    opacity: .7;
+    color: rgb(228, 228, 228);
+    text-decoration: none;
+}
+
+.main_section {
+    margin-top: 20px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 999;
+    top: 0;
+    display: none;
+}
+
+.fancy_block {
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #f1f1f1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    max-width: 320px;
+    display: none;
+}
+
+#send_tel h5 {
+    font-size: 15px;
+    text-align: center;
+    color: #999;
+}
+
+.close_fancy {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #999;
+}
+
+.close_fancy:hover {
+    color: red;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: .7;
+}
+
+#send_tel input[type="submit"] {
+    background: #efb247;
+    color: #fff;
+}
+
+#send_tel input {
+    font-size: 15px;
+}
+
+.error_text, .success_text {
+    font-style: italic;
+    font-size: 12px;
+    display: none;
+    text-align: center;
+}
+
+.error_text {
+    color: red;
+}
+
+.success_text {
+    color: green;
+}

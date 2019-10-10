@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Магазин одежды Атланта</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/987a4b9809.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+</head>
+<body>
+<header>
+    <div class="top_nav">
+        <div class="container">
+            <div class="row">
+                <!--<div class="col-md-9">
+                    <nav class="navbar navbar-expand-lg navbar_top">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link active" href="#">Начало</a>
+                                <a class="nav-item nav-link" href="#">Контакты</a>
+                                <a class="nav-item nav-link" href="#">Статьи</a>
+                                <a class="nav-item nav-link" href="#">О компании</a>
+                                <a class="nav-item nav-link" href="#">Новости</a>
+                                <a class="nav-item nav-link" href="#">Доставка и Оплата</a>
+                                <a class="nav-item nav-link" href="#">Гарантии</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>-->
+                <div class="col-md-3 users_top">
+                    <a href="#"><img src="img/Flag_of_United_Kingdom.png" alt=""></a>
+                    <a href="#"><img src="img/Flag_of_Russia.png" alt=""></a>
+                    <a href="#" class="user_button"><i class="fas fa-sign-in-alt"></i> Войти</a>
+                    <a href="#" class="user_button"><i class="fas fa-user-plus"></i> Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content_header">
+        <div class="container">
+            <div class="row main_header_content">
+                <div class="col-md-5">
+                    <a href="#"><img class="logo" src="img/logo.png" alt=""></a>
+                </div>
+                <div class="col-md-4">
+                    <div class="not_phone"><a href="#">Не дозвонились?</a></div>
+                    <div class="number_phone row">
+                        <div class="col-md-6">
+                            <a class="phone_a" href="tel:+380507577577">
+                                <img src="img/vodafone.png" alt="">
+                                <small>(050)</small>
+                                757-75-77
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="phone_a" href="tel:+380677577577">
+                                <img src="img/kyivstar.png" alt="">
+                                <small>(067)</small>
+                                757-75-77
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" class="search_text" placeholder="Поиск по сайту...">
+                            <button class="search_button"><img src="img/search_loop.png" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 carts_info">
+                    <a href="#">
+                        <div class="for_img">
+                            <img src="img/cart.png" alt=""></div>
+                    </a>
+                    <div class="for_cart_content">
+                        <h4>Корзина</h4>
+                        <span>
+								Товаров:<span class="count_prod">5</span><br>
+								На сумму:<span class="sum_prod">5000 грн</span>
+							</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="menu_main_ul">
+                        <a href="#" class="item_main_menu">Женская одежда</a>
+                        <a href="#" class="item_main_menu">Мужская одежда</a>
+                        <a href="#" class="item_main_menu">Детская одежда</a>
+                        <a href="#" class="item_main_menu">Подарочная карта</a>
+                        <a href="#" class="item_main_menu">Бренды</a>
+                        <a href="#" class="item_main_menu">Новинки</a>
+                        <a href="#" class="item_main_menu">Распродажа</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="overlay"></div>
+<div class="fancy_block">
+    <form id="send_tel">
+        <h5>Отправьте нам Ваш номер телефона и мы с Вами свяжемся в кратчайшие сроки</h5>
+        <a href="#" class="close_fancy"><i class="fa fa-close"></i></a>
+        <div class="form-group">
+            <input class="form-control" type="text" id="name" name="name" placeholder="Имя">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" id="phone" name="phone" placeholder="Номер телефона">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="submit" id="recall" name="recall" value="Перезвонить">
+        </div>
+        <span class="error_text">Отправить сообщение не удалось. Пожалуйста, заполните все поля.</span>
+        <span class="success_text">Спасибо. Ваши данные переданы администратору.</span>
+    </form>
+</div>
+<section class="main_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slider">
+                    <div class="slider__wrapper">
+                        <div class="slider__item">
+                            <div><img src="img/slider/1.png" alt=""></div>
+                        </div>
+                        <div class="slider__item">
+                            <div><img src="img/slider/веер%20с%20евро%20в%20руке.jpg" alt=""></div>
+                        </div>
+                        <div class="slider__item">
+                            <div><img src="img/slider/евро%20купюра%20200.jpg" alt=""></div>
+                        </div>
+                        <div class="slider__item">
+                            <div><img src="img/slider/евро%20на%20прищепках.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <a class="slider__control slider__control_left" href="#" role="button"></a>
+                    <a class="slider__control slider__control_right" href="#" role="button"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
