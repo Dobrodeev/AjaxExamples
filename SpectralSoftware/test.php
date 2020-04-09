@@ -1,4 +1,13 @@
 <?php
+/**
+ * API-doc: https://openweathermap.org/forecast5
+ * API-key: 731fdb9f46272f54a8b68c894765410b
+ * @package weather
+ * @author Soldatov A.
+ * @copyright 2019
+ * @license GPL
+ * @link https://openweathermap.org/forecast5
+ */
 //https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22
 
 // адрес запроса&mode=xml
