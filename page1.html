@@ -10,21 +10,20 @@
 <div></div>
 <script>
     function forEach(data, callback) {
-        for (var key in data)
-        {
-            if (data.hasOwnProperty(key))
-            {
-                callback (key, data[key])
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+                callback(key, data[key])
             }
         }
     }
+
     $.ajax({
-        url:'index.php',
-        dataTYPE:'json',
-        success:function (data) {
-            var str=[];
+        url: 'index.php',
+        dataTYPE: 'json',
+        success: function (data) {
+            var str = [];
             forEach(data, function (key, value) {
-                str.push('<b>'+key+'</b>='+value)
+                str.push('<b>' + key + '</b>=' + value)
             });
             $("div").html(str.join('<br>'));
         }

@@ -1,19 +1,19 @@
 <!--<!DOCTYPE html>-->
 <!--<html lang="en">-->
 <!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>Title</title>-->
-    <!--<script type="text/javascript" src="jquery-3.3.1.js"></script>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Title</title>-->
+<!--<script type="text/javascript" src="jquery-3.3.1.js"></script>-->
 <!--</head>-->
 <!--<body>-->
 <!--<script>-->
-    <!--$(function () {-->
-        <!--$('#load').click(function () {-->
-            <!--$('#feeds').load('index0.php', function (data) {-->
-                <!--alert(data);-->
-            <!--})-->
-        <!--})-->
-    <!--})-->
+<!--$(function () {-->
+<!--$('#load').click(function () {-->
+<!--$('#feeds').load('index0.php', function (data) {-->
+<!--alert(data);-->
+<!--})-->
+<!--})-->
+<!--})-->
 <!--</script>-->
 <!--<button id="load">Получить данные с php</button>-->
 <!--<div id="heeds">-->
@@ -45,7 +45,7 @@
     })
      */
     /**
-    $(function () {
+     $(function () {
         $('#load').click(function () {
             $('#feeds').html("");
             $('#feeds').load('index0.php', function (data) {
@@ -72,20 +72,21 @@
             $('#feeds').append('6<br>')
         });
     });
-    */
+     */
     function time() {
         $.ajax({
-            url:'index.php',
-            cash:false,
-            success:function (html) {
+            url: 'index.php',
+            cash: false,
+            success: function (html) {
                 $('#feeds').html(html)
             }
 
         });
     }
+
     $(document).ready(function () {
         time();
-        setInterval('time()',1000)
+        setInterval('time()', 1000)
     });
 </script>
 </body>

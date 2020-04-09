@@ -29,7 +29,7 @@ $result = mysqli_query($link,'SELECT * FROM example');//дописать зап�
 
 mysqli_close($link);*/
 
-include ('../config/config.php');
+include('../config/config.php');
 $query1 = 'SELECT * FROM `gt1_users`';
 $query12 = '';
 $stmt = $pdo->query($query1);
@@ -45,10 +45,10 @@ echo '<thead>
     </thead>
     <tbody>';
 while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
-	$query12 = 'SELECT * FROM `gt1_comments` WHERE `user_id`='.intval($row['user_id'])." ORDER BY `date` DESC LIMIT 1";
-	$stmt2 = $pdo->query($query12);
-	$row2 = $stmt2->fetch(PDO::FETCH_LAZY);
-    echo '<tr><td>' . $row['user_id'] . '</td><td>' . $row['fio'] . '</td><td>' . $row2['comments'] . '</td><td>' . $row2['date'] . '</td></tr>';
+    $query12 = 'SELECT * FROM `gt1_comments` WHERE `user_id`='.intval($row['user_id'])." ORDER BY `date` DESC LIMIT 1";
+    $stmt2 = $pdo->query($query12);
+    $row2 = $stmt2->fetch(PDO::FETCH_LAZY);
+    echo '<tr><td>'.$row['user_id'].'</td><td>'.$row['fio'].'</td><td>'.$row2['comments'].'</td><td>'.$row2['date'].'</td></tr>';
 }
 echo '</tbody>
 </table>';

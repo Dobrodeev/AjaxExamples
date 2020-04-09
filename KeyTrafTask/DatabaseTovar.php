@@ -11,7 +11,8 @@ $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $opt = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES => false,];
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
 $pdo = new PDO($dsn, $user, $pass, $opt);
 
 if ($num_el == 1) {
@@ -38,7 +39,7 @@ if ($num_el == 1) {
 	  </thead>
 	  <tbody>';
     while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
-        echo '<tr><td>' . $row['id'] . '</td><td>' . $row['name'] . '</td><td>' . $row['price'] . '</td><td>' . $row['count'] . '</td><td>' . $row['fio'] . '</td></tr>';
+        echo '<tr><td>'.$row['id'].'</td><td>'.$row['name'].'</td><td>'.$row['price'].'</td><td>'.$row['count'].'</td><td>'.$row['fio'].'</td></tr>';
     }
     echo '</tbody>
 	</table>';
@@ -57,10 +58,9 @@ if ($num_el == 2) {
 	  </thead>
 	  <tbody>';
     while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
-        echo '<tr><td>' . $row['name'] . '</td><td>' . $row['count'] . '</td><td>' . $row['price'] . '</td></tr>';
+        echo '<tr><td>'.$row['name'].'</td><td>'.$row['count'].'</td><td>'.$row['price'].'</td></tr>';
     }
     echo '</tbody>
 	</table>';
 }
-
 ?>

@@ -26,12 +26,13 @@ cr.plugins_.EnDe = function (runtime) {
 
     instanceProto.onCreate = function () {
     };
-/*возвращаем null если первый параметр null или второй меньше равно нуля*/
+
+    /*возвращаем null если первый параметр null или второй меньше равно нуля*/
     function EN(str, pw) {
         if (pw == null || pw.length <= 0) {
             return null;
         }
-/*обьявляем пустую строку*/
+        /*обьявляем пустую строку*/
         var prand = "";
         for (var i = 0; i < pw.length; i++) {
             prand += pw.charCodeAt(i).toString();
@@ -130,7 +131,7 @@ cr.plugins_.EnDe = function (runtime) {
     };
     /*Создаем обьект Exps()*/
     pluginProto.exps = new Exps();
-/*К обьекту Exps применяем метод .EN и записываем function() ему в прототип*/
+    /*К обьекту Exps применяем метод .EN и записываем function() ему в прототип*/
     Exps.prototype.EN = function (ret, str, pw) {
         str = escape(str);
         pw = escape(pw);

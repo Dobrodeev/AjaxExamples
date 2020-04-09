@@ -15,10 +15,10 @@
     $(document).ready(function () {
         $('#myForm').submit(function () {
             $.ajax({
-                type:'POST',
-                url:'index.php',
-                data:"username="+$("#username").val(),
-                success:function (html) {
+                type: 'POST',
+                url: 'index.php',
+                data: "username=" + $("#username").val(),
+                success: function (html) {
                     $('#content').html(html);
                 }
             });

@@ -27,8 +27,10 @@ $query = "SELECT * FROM probability LIMIT $rel, 4";
 $stmt = $pdo->query($query);
 $i = 0;
 while ($row = $stmt->fetch()) {
-    if ($i == 3) break;
-    $html .= '<tr><td>' . $row['probability_id'] . '</td><td>' . $row['first'] . '</td><td>' . $row['second'] . '</td></tr>';
+    if ($i == 3) {
+        break;
+    }
+    $html .= '<tr><td>'.$row['probability_id'].'</td><td>'.$row['first'].'</td><td>'.$row['second'].'</td></tr>';
     $i++;
 }
 $data['dt'] = $html;

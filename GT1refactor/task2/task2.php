@@ -62,7 +62,7 @@
                 data: msg,
                 success: function (data) {
                     // $('.form-send').reset();
-                    $( "input" ).each(function() {
+                    $("input").each(function () {
                         $(this).val('');
                     });
                     $('#results').html(data);

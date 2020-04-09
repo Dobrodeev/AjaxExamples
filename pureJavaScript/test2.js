@@ -23,7 +23,7 @@ MT.p_.rA = function (runtime) {
     };
 
     var instanceProto = pl_Proto.Instance.prototype;
-/**/
+    /**/
     instanceProto.onCreate = function () {
         this.cx = this.properties[0];
 

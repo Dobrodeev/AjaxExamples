@@ -36,12 +36,12 @@ for ($i = 0; $i <= 3; $i ++){
 echo $hello[strlen($hello) - 1];*/
 echo 'Индексный массив: <br>';
 $array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-for ($i = 0; $i < count($array3); $i ++){
+for ($i = 0; $i < count($array3); $i++) {
     echo $array3[$i].' ';
 }
 echo '<br>';
 echo 'Индексный массив в обратном порядке: <br>';
-for ($i = count($array3) - 1; $i >= 0; $i --){
+for ($i = count($array3) - 1; $i >= 0; $i--) {
     echo $array3[$i].' ';
 }
 echo '<br>';
@@ -53,29 +53,29 @@ print_r($array4);
 echo '</pre>';
 echo 'Третий элемент: '.$array4[3].'<br>';*/
 echo 'Ассоциативный массив из букв английского алфавита: <br>';
-foreach ($array4 as $key=>$value){
+foreach ($array4 as $key => $value) {
     echo $key.'=>'.$value.' ';
 }
 echo '<pre>';
 print_r($array4);
 echo '</pre>';
 echo '<br>';
-foreach (array_reverse($array4) as $i => $value){
+foreach (array_reverse($array4) as $i => $value) {
     echo $value.' ';
 }
 echo '<br>';
-foreach ($array4 as $i => $value){
+foreach ($array4 as $i => $value) {
     echo $value.' ';
 }
 echo '<br>';
 //Еще один вариант реверсивного перебора. Будет работать также с ассоциативными массивами. Предварительный реверс массива не требуется, поэтому будет эффективнее
 $array = ["zero", "one", "two", "three", "four"];
 echo 'Ассоциативный массив: <br>';
-foreach ($array as $value){
+foreach ($array as $value) {
     echo $value.' ';
 }
 echo '<br>';
 echo 'Ассоциативный массив в обратном порядке: <br>';
-for (end($array); ($key = key($array)) !== null; prev($array) ) {
-    print($key . " : " . current($array) . "\n");
+for (end($array); ($key = key($array)) !== null; prev($array)) {
+    print($key." : ".current($array)."\n");
 }
