@@ -14,7 +14,10 @@ $opt = [
     PDO::ATTR_EMULATE_PREPARES => false,
 ];
 $pdo = new PDO($dsn, $user, $pass, $opt);
-
+/**
+ * 1) Номер заказа, имя товара, цена, количество, имя оператора за которым числится заказ ,ГДЕ количество товара >2 И id оператора 10 ИЛИ 12
+ * 2) Имя товара, количество товара, и сумма (price) по каждому товару (сгруппировать)
+*/
 if ($num_el == 1) {
     $query = 'SELECT rq.id, off.name, rq.price, rq.count, op.fio FROM operators op
   JOIN requests rq ON op.id=rq.operator_id
