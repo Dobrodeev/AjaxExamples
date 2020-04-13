@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <decsription></decsription>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
@@ -11,9 +11,12 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="pages.js"></script>
 <p>Какую страницу вам открыть?</p>
-<form action="">
-    <input type="button" id="btn1" value="Новости дня">
-    <input type="button" id="btn2" value="Погода">
+<form action="" class="">
+    <div class="form-group">
+        <label for="">Page 1 or 2</label><br>
+        <input type="button" id="btn1" value="Новости дня">
+        <input type="button" id="btn2" value="Погода">
+    </div>
     <div id="content"></div>
     <script>
         /*$(document).ready(function () {
