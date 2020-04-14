@@ -2,7 +2,7 @@
 $num_el = addslashes($_REQUEST['num_el']);
 
 $host = '127.0.0.1';
-$db = 'testworktrafgid';
+$db = 'regandauto';
 $user = 'root';
 $pass = '';
 $charset = 'utf8';
