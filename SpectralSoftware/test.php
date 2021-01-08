@@ -26,7 +26,7 @@ $result = curl_exec($cURL);
 curl_close($cURL);
 //print_r($result);
 //$result = '{"Cancelled":false,"MessageID":"402f481b-c420-481f-b129-7b2d8ce7cf0a","Queued":false,"SMSError":2,"SMSIncomingMessages":null,"Sent":false,"SentDateTime":"\/Date(-62135578800000-0500)\/"}';
-$json = json_decode($result, true);
+$json = json_decode($result, false);
 echo '<pre>';
 print_r($json);
 echo '</pre>';
